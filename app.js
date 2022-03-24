@@ -11,6 +11,9 @@ app.use(shopRoutes);
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+app.use((req,res,next) =>{
+    res.status(404).send('Page Not Found');
+})
 
 app.listen(8000);
 
